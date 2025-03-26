@@ -55,10 +55,10 @@ public class SearchTarget {
         long linearTime = endTime - startTime;
         System.out.println("Time Taken by linear search: " + linearTime / 1e6 + "ms"); // in ms
 
-        // Binary Search Time
-        startTime = System.nanoTime();
         // Sort the array to perform binary search
         Arrays.sort(data);
+        // Binary Search Time
+        startTime = System.nanoTime();
 
         int low = 0 ,high = data.length - 1;
         found = false;
@@ -94,22 +94,22 @@ public class SearchTarget {
 }
 // Sample Output ->
 // Current Dataset Size: 1000
-// 267 is not found in the dataset.
-// Time Taken by linear search: 1.495708ms
-// 267 is not found in the dataset.
-// Time taken by binary search: 0.56525ms
-// Binary Search is faster by 0.930458ms
+// 904 is found at index: 640
+// Time Taken by linear search: 9.743ms
+// 904 is found at index: 895
+// Time taken by binary search: 0.088209ms
+// Binary Search is faster by 9.654791ms
 
 // Current Dataset Size: 10000
-// 8576 is not found in the dataset.
-// Time Taken by linear search: 0.108792ms
-// 8576 is not found in the dataset.
-// Time taken by binary search: 2.57225ms
-// Linear Search is faster by 2.463458ms
+// 5750 is found at index: 4096
+// Time Taken by linear search: 0.103458ms
+// 5750 is found at index: 5770
+// Time taken by binary search: 0.172625ms
+// Linear Search is faster by 0.069167ms
 
 // Current Dataset Size: 1000000
-// 519653 is found at index: 98866
-// Time Taken by linear search: 12.729333ms
-// 519653 is found at index: 519437
-// Time taken by binary search: 97.809417ms
-// Linear Search is faster by 85.080084ms
+// 531080 is found at index: 163220
+// Time Taken by linear search: 1.912166ms
+// 531080 is found at index: 531386
+// Time taken by binary search: 0.224875ms
+// Binary Search is faster by 1.687291ms
